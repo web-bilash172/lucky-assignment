@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Book from '../Book/Book';
+import Cart from '../Cart/Cart';
 import './Shop.css'
 const Shop = () => {
 
@@ -12,26 +13,30 @@ const Shop = () => {
     }, []);
     const [cart, setCart] = useState([])
     const handleAddToCart = (book) => {
-        const newCart = [...cart, book.title];
+        const newCart = [...cart, book];
         setCart(newCart);
+
+    }
+    const selectRandomItem = () => {
+
     }
     return (
         <div className='shop-container'>
             <div className="book-container">
                 {
+
                     books.map(book => <Book
                         key={book.id}
                         book={book}
                         handleAddToCart={handleAddToCart}
+
                     ></Book>)
+
                 }
             </div>
             <div className="cart-container">
-                <h3>Selected Books</h3>
-                <div className='slected-btn'>
-                    <p className='book-name'>Book Name:{cart}</p>
-                    <button>Select one for me</button>
-                    <button>choose again</button>
+                <div className="cart-container">
+                    <Cart cart={cart}></Cart>
                 </div>
             </div>
         </div>
@@ -39,3 +44,4 @@ const Shop = () => {
 };
 
 export default Shop;
+
