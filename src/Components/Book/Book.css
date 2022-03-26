@@ -34,6 +34,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    left: 0%;
  }
  .button-cart:hover{
     background-color: orange;

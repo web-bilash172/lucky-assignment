@@ -10,8 +10,10 @@ const Shop = () => {
             .then(data => setBooks(data));
 
     }, []);
-    const handleAddToCart = () => {
-        console.log();
+    const [cart, setCart] = useState([])
+    const handleAddToCart = (book) => {
+        const newCart = [...cart, book.title];
+        setCart(newCart);
     }
     return (
         <div className='shop-container'>
@@ -27,6 +29,7 @@ const Shop = () => {
             <div className="cart-container">
                 <h3>Selected Books</h3>
                 <div className='slected-btn'>
+                    <p className='book-name'>Book Name:{cart}</p>
                     <button>Select one for me</button>
                     <button>choose again</button>
                 </div>
