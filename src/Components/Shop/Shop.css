@@ -29,8 +29,8 @@ gap: 30px;
        background-color: antiquewhite ;
        border: 0ch;
    }
-   .slected-btn :hover{
-       background-color: darkgray;
+   .slected-btn:hover{
+       background-color:rgb(255, 184, 41);
    }
 .book-name{
     border: 5px;
