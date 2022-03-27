@@ -1,13 +1,32 @@
-import React from 'react';
+// cart component 
+
+import React, { useState } from 'react';
+import '../Book/Book';
 import Book from '../Book/Book';
+import './Cart.css';
+// cart 
+const Cart = ({ cart, selection }) => {
 
-const Cart = ({ cart }) => {
+
+    const { title } = cart;
     return (
-        <div>
 
-            <h3>Seleted Books: </h3>
+        <div className='cart'>
+
+
+            <div >
+
+                <h4 className='selected-book'>
+                    {title}
+                </h4>
+
+
+            </div>
+            <h3>{selection}</h3>
         </div>
+
     );
+
 };
 
 export default Cart;

@@ -1,0 +1,7 @@
+.selected-book{
+    border:solid black 3px;
+    border-radius: 10px;
+    background-color: azure;
+    height: 40px;
+   
+}

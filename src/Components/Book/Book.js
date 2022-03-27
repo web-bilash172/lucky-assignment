@@ -1,5 +1,7 @@
+// book component 
 import React from 'react';
-import './Book.css'
+import './Book.css';
+import '../Cart/Cart';
 const Book = (props) => {
     const { book, handleAddToCart } = props;
     const { author, title, language, price, imageLink } = book;
